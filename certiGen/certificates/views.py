@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Profile, certifs
-from generate_certificate.cert_gen import cert_enc_gen
+from .generate_certificate.cert_gen import cert_enc_gen
 
 def index(request):
     context = {}
