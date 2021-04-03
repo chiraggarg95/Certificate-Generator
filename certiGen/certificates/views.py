@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Profile, certifs
+from wagtail.images.views.serve import ServeView
 
 def index(request):
     context = {}
