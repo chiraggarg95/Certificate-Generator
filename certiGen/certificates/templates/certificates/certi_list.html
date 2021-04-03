@@ -9,8 +9,11 @@
     Hey, {{name}}. This is the list of your certificates:
     <ul>
 
-        {% for cert in certs %}
-            <li>{{cert.certificate_name}}</li>
+        {% for ab in zipped %}
+            <li>{{ab.0.certificate_name}}</li>
+            <img src=ab.1 
+               height="100px"
+               width="300px" >
         {% endfor %}
         
     </ul>
