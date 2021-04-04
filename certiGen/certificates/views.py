@@ -22,7 +22,7 @@ def certi_list(request):
     email_id = request.POST['email']
     name = get_object_or_404(Profile, email=email_id).name
     certs = certifs.objects.filter(email=email_id)
-    encs = [('data:image/jpg;base64,' + cert_enc_gen(name, cert.certificate_name)) for cert in certs]
+    encs = [(cert_enc_gen(name, cert.certificate_name)) for cert in certs]
     context = {
         'name': name,
         'certs': certs,
