@@ -11,7 +11,7 @@
 
         {% for ab in zipped %}
             <li>{{ab.0.certificate_name}}</li>
-            <img src="data:image/png;base64,{{ab.1}}"
+            <img src="{% static '/images/' ab.0 '.jpg' %}"
                height="100px"
                width="300px" >
         {% endfor %}
